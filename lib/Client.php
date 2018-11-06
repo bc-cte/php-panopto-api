@@ -179,7 +179,7 @@ class Client {
         }
 
         // If method used the same time, create requested client instance.
-        $wsdl = 'https://' . $this->serverhostname . '/Panopto/PublicAPI/' . self::CLIENT_VERSION . '/' . $name . '.svc?wsdl';
+        $wsdl = '/var/www/html/api/resources/wsdls/' . $name . '.xml';
         $this->$privatevar = new $class($this->soapoptions, $wsdl);
         return $this->$privatevar;
     }
